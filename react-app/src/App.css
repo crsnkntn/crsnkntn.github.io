@@ -1,0 +1,29 @@
+/* Light mode styles */
+.light-mode {
+  background-color: #fff;
+  color: #333;
+  height: 100%;
+}
+
+.light-mode .header {
+  background-color: #f7f7f7;
+}
+
+.light-mode .project-view {
+  background-color: #fff;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+  height: 100%;
+}
+
+.dark-mode .header {
+  background-color: #444;
+}
+
+.dark-mode .project-view {
+  background-color: #222;
+}

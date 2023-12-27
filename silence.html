@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Markdown Rendering Example</title>
+    <!-- Include marked.js in the head -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div id="markdownContainer"></div>
+
+    <!-- Your custom script at the end of the body -->
+    <script>
+        fetch('assets/md/silence.md')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(markdownContent => {
+                document.getElementById('markdownContainer').innerHTML = marked.parse(markdownContent);
+                console.log(marked.parse(markdownContent));
+            })
+            .catch(error => {
+                console.error('Error fetching the Markdown file:', error);
+            });
+    </script>
+</body>
+</html>
