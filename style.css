@@ -68,7 +68,7 @@ nav ul li a:hover {
 /* Block Styles */
 .block {
     width: 100%; /* Full width of the container */
-    height: 320px;
+    height: 340px;
     box-sizing: border-box; /* Include padding and border in the width */
     margin: -1px; /* Reset any default margin */
     border-top: 2px solid #ccc;
