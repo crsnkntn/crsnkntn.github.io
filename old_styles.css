@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace; /* Typewriter-like font */
+    background-color: #121212; /* Dark background */
+    color: hsl(0, 0%, 88%); /* Light text color for contrast */
+}
+
+main-container {
+    width: 80%;
+    height: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1f1f1f; /* Dark header */
+    border-bottom: 2px solid #333; /* Darker line */
+}
+
+header h1 {
+    color: #4caf84; /* Accent color */
+}
+
+nav {
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 200px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0; /* Light text color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    color: #4caf84; /* Accent color for hover */
+}
+
+.announcement-banner {
+    background-color: #333; /* Darker banner */
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff; /* White text */
+}
+
+.main-content {
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+.column-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.column h2 {
+    height: 40px;
+    color: #4caf84; /* Accent color */
+}
+
+.column ul {
+    overflow-y: auto;
+    min-height: 300px;
+    max-height: 700px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-tile {
+    background-color: #1f1f1f; /* Dark project tiles */
+    margin-bottom: 10px;
+    padding: 10px;
+    min-height: 200px; /* Fixed height */
+    border: 1px solid #333; /* Darker border */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Stronger shadow */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+    display: block;
+    overflow: hidden; /* Hides any overflowing content */
+    position: relative; /* Ensures proper positioning for children */
+}
+
+.project-tile a {
+    text-decoration: none;
+    color: inherit; /* Inherits text color from parent */
+    display: block; /* Makes the entire tile clickable */
+}
+
+.project-tile img {
+    max-width: calc(100% - 20px); /* Full width of parent minus padding */
+    max-height: calc(100% - 20px); /* Full height of parent minus padding */
+    margin: 10px; /* Margin around the image */
+    display: block; /* Removes any inline spacing */
+    object-fit: contain; /* Ensures the image aspect ratio is maintained */
+}
+
+
+.project-tile:hover {
+    background-color: #2a2a2a; /* Slightly lighter on hover */
+    transform: translateY(-5px); /* Subtle lift effect on hover */
+    cursor: pointer;
+}
+
+.project-title {
+    font-weight: bolder;
+    min-height: 35px;
+    color: #e0e0e0; /* Light text color */
+}
+
+.project-desc {
+    font-weight: bold;
+    min-height: 100px;
+    color: #bdbdbd; /* Slightly lighter text for description */
+}

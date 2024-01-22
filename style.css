@@ -1,133 +1,157 @@
-* {
+/* General Styles */
+body {
+    font-family: 'Montserrat', monospace; /* Typewriter-like font */
+    background-color: #121212; /* Dark background */
+    color: hsl(0, 0%, 88%); /* Light text color for contrast */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Courier New', monospace; /* Typewriter-like font */
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text color for contrast */
-}
-
+/* Header Styles */
 header {
+    position: fixed;
+    width: 100%; /* Makes the header extend full width of the viewport */
+    top: 0;
+    left: 0; /* Ensures the header starts from the left edge */
     display: flex;
+    align-items: center; /* Ensures vertical alignment of children */
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #1f1f1f; /* Dark header */
-    border-bottom: 2px solid #333; /* Darker line */
+    z-index: 1000; /* Ensures the header stays above other content */
+    padding: 10px 20px; /* Uniform padding around header elements */
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
 }
 
 header h1 {
-    color: #4caf84; /* Accent color */
+    font-size: 34px;
+    margin: 0; /* Resets default margin */
 }
 
 nav {
     text-align: right;
+    align-self: center; /* Corrected for vertical alignment */
+    margin: 0; /* Resets default margin */
 }
 
 nav ul {
     list-style: none;
+    padding: 0; /* Reset default padding */
     display: inline-block;
 }
 
 nav ul li {
     display: inline;
-    margin-left: 200px;
+    margin-left: 50px;
+    font-size: 23px;
+    font-weight: bold;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #e0e0e0; /* Light text color */
+    color: #d1d1d1; /* Light text color */
     transition: color 0.3s; /* Smooth transition for hover effect */
 }
 
 nav ul li a:hover {
-    color: #4caf84; /* Accent color for hover */
+    color: #44bda1; /* Accent color for hover */
+    text-decoration: underline;
 }
 
-.announcement-banner {
-    background-color: #333; /* Darker banner */
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    color: #fff; /* White text */
+/* Scroll Container */
+.scroll-container {
+    margin-top: 80px; /* Adjust based on the header height */
+    width: 100vw; /* Viewport width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 0; /* Reset any default padding */
 }
 
-.main-content {
-    display: block;
-    width: 100%;
-    padding: 10px;
+/* Block Styles */
+.block {
+    width: 100%; /* Full width of the container */
+    height: 320px;
+    box-sizing: border-box; /* Include padding and border in the width */
+    margin: -1px; /* Reset any default margin */
+    border-top: 2px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 
-.column-container {
+/* New Styles for Content Area */
+.content-area {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    align-items: flex-start; /* Align items at the top */
+    padding: 20px;
+    height: 85%;
 }
 
-.column {
-    flex: 1;
-    margin: 0 10px;
+/* Text Area Styles */
+.text-area {
+    height: 100%; /* Confirm parent has a defined height */
+    width: 70%; /* Adjust as needed */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes space between elements */
+    align-items: flex-start;
 }
 
-.column h2 {
-    height: 40px;
-    color: #4caf84; /* Accent color */
+.text-area h2, .text-area p {
+    width: 100%; /* Makes all child elements have the same width */
+    margin: 2px 0; /* Adds a little space between elements */
 }
 
-.column ul {
-    overflow-y: auto;
-    min-height: 300px;
-    max-height: 700px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Button Panel Styles */
+.text-area .button-panel {
+    width: 100%; /* Makes all child elements have the same width */
+    /* Additional styling if needed */
+    display: flex;
+    justify-content: flex-start; /* Aligns buttons to the start */
+    gap: 8px; /* Adds space between buttons */
 }
 
-.project-tile {
-    background-color: #1f1f1f; /* Dark project tiles */
-    margin-bottom: 10px;
-    padding: 10px;
-    min-height: 200px; /* Fixed height */
-    border: 1px solid #333; /* Darker border */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Stronger shadow */
-    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
-    display: block;
-    overflow: hidden; /* Hides any overflowing content */
-    position: relative; /* Ensures proper positioning for children */
-}
-
-.project-tile a {
-    text-decoration: none;
-    color: inherit; /* Inherits text color from parent */
-    display: block; /* Makes the entire tile clickable */
-}
-
-.project-tile img {
-    max-width: calc(100% - 20px); /* Full width of parent minus padding */
-    max-height: calc(100% - 20px); /* Full height of parent minus padding */
-    margin: 10px; /* Margin around the image */
-    display: block; /* Removes any inline spacing */
-    object-fit: contain; /* Ensures the image aspect ratio is maintained */
-}
-
-
-.project-tile:hover {
-    background-color: #2a2a2a; /* Slightly lighter on hover */
-    transform: translateY(-5px); /* Subtle lift effect on hover */
+.text-area .button-panel .button {
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none; /* Removes underline from hyperlinks */
+    color: rgb(23, 23, 23); /* Text color */
+    font-weight: 600;
+    background-color: #e1e1e1; /* Button color */
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.project-title {
-    font-weight: bolder;
-    min-height: 35px;
-    color: #e0e0e0; /* Light text color */
+.text-area .button-panel .button:hover {
+    background-color: rgb(161, 161, 161);
 }
 
-.project-desc {
-    font-weight: bold;
-    min-height: 100px;
-    color: #bdbdbd; /* Slightly lighter text for description */
+.image-area {
+    flex-basis: 70%; /* Adjust the width as needed */
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+    padding-left: 60px; /* Adjust padding as needed */
+}
+
+.image-area img {
+    width: 88%; /* Image fills the container width */
+    height: auto; /* Maintain aspect ratio */
+    /* Additional styling as needed */
+    margin-bottom: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        margin-left: 10px;
+    }
+
+    .content-area {
+        flex-direction: column;
+    }
+
+    .text-area, .image-area {
+        flex-basis: 100%;
+    }
 }
