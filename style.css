@@ -1,41 +1,39 @@
-/* General Styles */
 body {
-    font-family: 'Montserrat', monospace; /* Typewriter-like font */
-    background-color: #121212; /* Dark background */
-    color: hsl(0, 0%, 88%); /* Light text color for contrast */
+    font-family: 'Montserrat', monospace;
+    background-color: #121212;
+    color: hsl(0, 0%, 88%);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Header Styles */
 header {
     position: fixed;
-    width: 100%; /* Makes the header extend full width of the viewport */
+    width: 100%;
     top: 0;
-    left: 0; /* Ensures the header starts from the left edge */
+    left: 0;
     display: flex;
-    align-items: center; /* Ensures vertical alignment of children */
+    align-items: center;
     justify-content: space-between;
-    z-index: 1000; /* Ensures the header stays above other content */
-    padding: 10px 20px; /* Uniform padding around header elements */
-    box-sizing: border-box; /* Includes padding in the element's total width and height */
+    z-index: 1000;
+    padding: 10px 20px;
+    box-sizing: border-box;
 }
 
 header h1 {
     font-size: 34px;
-    margin: 0; /* Resets default margin */
+    margin: 0;
 }
 
 nav {
     text-align: right;
-    align-self: center; /* Corrected for vertical alignment */
-    margin: 0; /* Resets default margin */
+    align-self: center;
+    margin: 0;
 }
 
 nav ul {
     list-style: none;
-    padding: 0; /* Reset default padding */
+    padding: 0;
     display: inline-block;
 }
 
@@ -48,74 +46,68 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #d1d1d1; /* Light text color */
-    transition: color 0.3s; /* Smooth transition for hover effect */
+    color: #d1d1d1;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #44bda1; /* Accent color for hover */
+    color: #44bda1;
     text-decoration: underline;
 }
 
-/* Scroll Container */
 .scroll-container {
-    margin-top: 80px; /* Adjust based on the header height */
-    width: 100vw; /* Viewport width */
-    box-sizing: border-box; /* Include padding and border in the width */
-    padding: 0; /* Reset any default padding */
+    margin-top: 80px;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0;
 }
 
-/* Block Styles */
 .block {
-    width: 100%; /* Full width of the container */
-    height: 340px;
-    box-sizing: border-box; /* Include padding and border in the width */
-    margin: -1px; /* Reset any default margin */
+    width: 100%;
+    min-height: 340px;
+    box-sizing: border-box;
+    margin: -1px;
     border-top: 2px solid #ccc;
     border-bottom: 1px solid #ccc;
 }
 
-/* New Styles for Content Area */
 .content-area {
     display: flex;
-    align-items: flex-start; /* Align items at the top */
+    align-items: flex-start;
     padding: 20px;
     height: 85%;
 }
 
-/* Text Area Styles */
 .text-area {
-    height: 100%; /* Confirm parent has a defined height */
-    width: 70%; /* Adjust as needed */
+    height: 100%;
+    width: 70%;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distributes space between elements */
+    justify-content: space-between;
     align-items: flex-start;
 }
 
 .text-area h2, .text-area p {
-    width: 100%; /* Makes all child elements have the same width */
-    margin: 2px 0; /* Adds a little space between elements */
+    width: 100%;
+    margin: 2px 0;
 }
 
-/* Button Panel Styles */
 .text-area .button-panel {
-    width: 100%; /* Makes all child elements have the same width */
-    /* Additional styling if needed */
+    width: 100%;
     display: flex;
-    justify-content: flex-start; /* Aligns buttons to the start */
-    gap: 8px; /* Adds space between buttons */
+    justify-content: flex-start;
+    gap: 8px;
 }
 
 .text-area .button-panel .button {
     display: inline-block;
     padding: 10px 15px;
     text-align: center;
-    text-decoration: none; /* Removes underline from hyperlinks */
-    color: rgb(23, 23, 23); /* Text color */
+    text-decoration: none;
+    color: rgb(23, 23, 23);
     font-weight: 600;
-    background-color: #e1e1e1; /* Button color */
+    background-color: #e1e1e1;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -127,22 +119,20 @@ nav ul li a:hover {
 }
 
 .image-area {
-    flex-basis: 70%; /* Adjust the width as needed */
+    flex-basis: 70%;
     display: flex;
-    justify-content: center; /* Center image horizontally */
-    align-items: center; /* Center image vertically */
-    padding-left: 60px; /* Adjust padding as needed */
+    justify-content: center;
+    align-items: center;
+    padding-left: 60px;
 }
 
 .image-area img {
-    max-width: 500px;
-    width: 88%; /* Image fills the container width */
-    height: auto; /* Maintain aspect ratio */
-    /* Additional styling as needed */
+    max-width: 200px;
+    width: 88%;
+    max-height: 200px;
     margin-bottom: 30px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     nav ul li {
         margin-left: 10px;

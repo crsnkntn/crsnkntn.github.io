@@ -22,12 +22,14 @@
             <div class="content-area">
                 <div class="text-area">
                     <h2>Writing, Training, and Interpreting a Vision Transformer</h2>
-                    <p>Using PyTorch, I wrote a Vision Transformer from scratch. The embedding design is from the original ViT paper. </p>
-                    <p>The domain for the project was the classification of ASL letter sign images.</p>
-                    <p>In addition to writing and training, I was able to decipher some behavior from the self attention and MLP layers.</p>
+                    <p>Vision Transformer written from scratch using PyTorch. The embedding design is from the original ViT paper. Inspired by the TrOCR paper.</p>
+                    <p>Trained models to classify images of ASL letter signs.</p>
+                    <p>Found potentially interesting mechanisms in some attention heads.</p>
                     <div class="button-panel">
                         <a class="button" href="https://github.com/crsnkntn/VisionTransformer">Github</a>
                         <a class="button" href="https://open.substack.com/pub/learningrevolution/p/writing-training-and-interpreting?r=2r9qan&utm_campaign=post&utm_medium=web&showWelcome=true">Blog Post</a>
+                        <a class="button" href="https://arxiv.org/abs/2010.11929">ViT Paper</a>
+                        <a class="button" href="https://arxiv.org/abs/2109.10282">TrOCR Paper</a>
                     </div>
                 </div>
                 <div class="image-area">
@@ -39,10 +41,10 @@
         <div class="block">
             <div class="content-area">
                 <div class="text-area">
-                    <h2>Program Synthesis with LLM-Sourced Heuristics (Python)</h2>
+                    <h2>Program Synthesis with LLM-Sourced Heuristics</h2>
                     <p>An attempt to improve the asymptotic performance of Google Deepmind's TensorFlow Coder (https://arxiv.org/abs/2003.09040), a bottom-up enumerative search for TensorFlow programs.</p>
-                    <p>While the original performance was surpassed, it did not improve asymptotic performance</p>
-                    <p>An LLM effectively guiding a search process is a fundamental problem in AI research</p>
+                    <p>My implementation was altogether faster and it found a few more solutions in the test suite.</p>
+                    <p>Future work in guiding a search process with an LLM is intriguing.</p>
                     <div class="button-panel">
                         <a class="button" href="https://github.com/crsnkntn/tensorflow-coder-IntPrSys">Github</a>
                         <a class="button" href="google.com">Blog Post</a>
@@ -58,13 +60,11 @@
         <div class="block">
             <div class="content-area">
                 <div class="text-area">
-                    <h2>Classifying Reddit Users in r/CFB (Python)</h2>
+                    <h2>Classifying Reddit Users in r/CFB (In Progress)</h2>
                     <p>First things first, GO BLUE. Reddit users on r/CFB often leave subtle clues about which teams they support.</p>
-                    <p>Leveraging the Reddit flair system as a form of labelling, a team and are training models to classify users.</p>
+                    <p>Leveraging the Reddit flair system as a form of labelling, a team and I are training models to classify users.</p>
                     <p>This is currently being worked on for the Human Behavior Modelling course.</p>
                     <div class="button-panel">
-                        <a class="button" href="https://github.com/crsnkntn/tensorflow-coder-IntPrSys">Github</a>
-                        <a class="button" href="google.com">Blog Post</a>
                     </div>
                 </div>
                 <div class="image-area">
@@ -76,13 +76,12 @@
         <div class="block">
             <div class="content-area">
                 <div class="text-area">
-                    <h2>Langset: Vocabulary and Phrase Flashcard Generation (Python, React)</h2>
+                    <h2>Langset: Vocabulary and Phrase Flashcard Generation</h2>
                     <p>In the dark days before Chat-GPT, this GPT-3-based product would generate lists of translation pairs for over 40 languages. The neat part was the ability to curate lists and export them to Anki.</p>
                     <p>Unfortunately this product is no longer active since it was hosted on Heroku before they removed the free tier.</p>
-                    <p>I would rewrite it, but GPT-4 does this out of the box.</p>
+                    <p>I would rewrite it but, since GPT-4 does this out of the box, that seems wasteful.</p>
                     <div class="button-panel">
                         <a class="button" href="https://github.com/mmartin4972/Langkit">Github</a>
-                        <a class="button" href="google.com">Blog Post</a>
                     </div>
                 </div>
                 <div class="image-area">
@@ -94,10 +93,10 @@
         <div class="block">
             <div class="content-area">
                 <div class="text-area">
-                    <h2>Tensor Library (C/C++)</h2>
+                    <h2>Tensor and Deep Learning Library</h2>
                     <p>The purpose of this was to learn about tensor programming and ML.</p>
                     <p>Another purpose was to gain an appreciation for what PyTorch and TensorFlow do.</p>
-                    <p>The library was used to build a NN that classifies MNIST digits. Classic!</p>
+                    <p>The library was used to build a NN that classifies MNIST digits.</p>
                     <div class="button-panel">
                         <a class="button" href="https://github.com/crsnkntn/carml/tree/main/cpp">Github</a>
                     </div>
@@ -113,7 +112,7 @@
                 <div class="text-area">
                     <h2>Data Structures and Algorithms (C++)</h2>
                     <p>Served as a debrief for my Data Structures and Algorithms course.</p>
-                    <p>Nothing crazy but I tried out some suave C++ design patterns.</p>
+                    <p>Nothing crazy but I did try out some suave C++ design patterns.</p>
                     <p>I also write this very cursed 2D Linked List.</p>
                     <div class="button-panel">
                         <a class="button" href="https://github.com/crsnkntn/Data-Structures-and-Algorithms/tree/main">Github</a>
@@ -122,6 +121,22 @@
                 <div class="image-area">
                     <!-- Insert images here -->
                     <img src="images/datastruct.jpg" alt="Image 1">
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div class="content-area">
+                <div class="text-area">
+                    <h2>Chess Game</h2>
+                    <p>Classic CS project, doesn't need an explanation.</p>
+                    <p>The graphics are from one of Chess.com's board skins.</p>
+                    <div class="button-panel">
+                        <a class="button" href="https://github.com/crsnkntn/Chess-Game">Github</a>
+                    </div>
+                </div>
+                <div class="image-area">
+                    <!-- Insert images here -->
+                    <img src="images/chess.jpg" alt="Image 1">
                 </div>
             </div>
         </div>
