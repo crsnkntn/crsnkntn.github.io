@@ -64,7 +64,7 @@ nav ul li a:hover {
 
 .block {
     width: 100%;
-    min-height: 340px;
+    min-height: 200px;
     box-sizing: border-box;
     margin: -1px;
     border-top: 2px solid #ccc;
@@ -74,7 +74,8 @@ nav ul li a:hover {
 .content-area {
     display: flex;
     align-items: flex-start;
-    padding: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
     height: 85%;
 }
 
@@ -90,7 +91,8 @@ nav ul li a:hover {
 
 .text-area h2, .text-area p {
     width: 100%;
-    margin: 2px 0;
+    margin: 10px 0;
+    flex-grow: 1;
 }
 
 .text-area .button-panel {
@@ -98,6 +100,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: flex-start;
     gap: 8px;
+    margin-bottom: 5px;
 }
 
 .text-area .button-panel .button {
@@ -127,9 +130,9 @@ nav ul li a:hover {
 }
 
 .image-area img {
-    max-width: 200px;
-    width: 88%;
-    max-height: 200px;
+    max-width: 500px;
+    width: 88%; /* Image fills the container width */
+    height: auto; /* Maintain aspect ratio */
     margin-bottom: 30px;
 }
 
