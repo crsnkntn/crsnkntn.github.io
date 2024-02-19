@@ -58,31 +58,36 @@ nav ul li a:hover {
 
 .scroll-container {
     margin-top: 80px;
-    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between items */
+    padding: 20px;
     box-sizing: border-box;
-    padding: 0;
 }
 
 .block {
-    width: 100%;
-    min-height: 200px;
+    display: flex; /* Flex layout for internal alignment */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Space between title/description and buttons */
+    background-color: #222; /* Slight background contrast */
+    padding: 20px;
     box-sizing: border-box;
-    margin: -1px;
-    border-top: 2px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    min-height: 300px; /* Fixed height */
+    margin-bottom: 20px; /* Space between rows */
+    border: none; /* Remove previous border styles */
 }
 
 .content-area {
     display: flex;
     align-items: flex-start;
-    padding-top: 20px;
+    padding-top: 0px;
     padding-left: 20px;
     height: 85%;
 }
 
 .text-area {
     height: 100%;
-    width: 70%;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -90,19 +95,28 @@ nav ul li a:hover {
     align-items: flex-start;
 }
 
-.text-area h2, .text-area p {
+.text-area h2 {
+    margin-bottom: 20px; /* Increase margin to separate from description */
+}
+
+.button-panel {
+    display: flex; /* Ensures flex layout for the buttons */
+    justify-content: flex-start; /* Aligns buttons to the start; change to 'center' for central alignment */
+    width: 100%; /* Ensures panel takes full width of its container */
+}
+
+.button {
+    margin-right: 10px; /* Adds spacing between buttons if there are multiple */
+    flex-shrink: 0; /* Prevents buttons from shrinking */
+    white-space: nowrap; /* Keeps button text on one line */
+}
+
+.text-area p {
     width: 100%;
     margin: 10px 0;
     flex-grow: 1;
 }
 
-.text-area .button-panel {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    gap: 8px;
-    margin-bottom: 5px;
-}
 
 .text-area .button-panel .button {
     display: inline-block;
@@ -122,24 +136,13 @@ nav ul li a:hover {
     background-color: rgb(161, 161, 161);
 }
 
-.image-area {
-    flex-basis: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 60px;
-}
-
-.image-area img {
-    max-width: 500px;
-    width: 88%; /* Image fills the container width */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 30px;
-}
 
 @media (max-width: 768px) {
     nav ul li {
         margin-left: 10px;
+    }
+    .scroll-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
     }
 
     .content-area {
