@@ -66,43 +66,45 @@ nav ul li a:hover {
 }
 
 .block {
-    display: flex; /* Flex layout for internal alignment */
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: space-between; /* Space between title/description and buttons */
-    background-color: #222; /* Slight background contrast */
+    position: relative; /* Makes it a positioning context for absolute elements */
+    background-color: #222;
     padding: 20px;
     box-sizing: border-box;
-    min-height: 300px; /* Fixed height */
-    margin-bottom: 20px; /* Space between rows */
-    border: none; /* Remove previous border styles */
+    min-height: 300px; /* Adjust based on your content needs */
+    margin-bottom: 20px;
 }
 
 .content-area {
-    display: flex;
-    align-items: flex-start;
-    padding-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 60px; /* Space for button panel */
     padding-left: 20px;
-    height: 85%;
+    padding-right: 20px;
+    height: calc(100% - 20px); /* Adjust height calculation if necessary */
 }
 
 .text-area {
-    height: 100%;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    position: relative; /* Allows for absolute positioning of children if needed */
+    height: calc(100% - 30px); /* Leaves space for the tag bar, adjust as needed */
 }
 
 .text-area h2 {
-    margin-bottom: 20px; /* Increase margin to separate from description */
+    font-size: 20px; /* Fixed size for consistency */
+    margin-bottom: 20px; /* Increased separation */
+}
+
+.text-area p {
+    font-size: 14px; /* Fixed size for consistency */
+    margin: 10px 0;
 }
 
 .button-panel {
-    display: flex; /* Ensures flex layout for the buttons */
-    justify-content: flex-start; /* Aligns buttons to the start; change to 'center' for central alignment */
-    width: 100%; /* Ensures panel takes full width of its container */
+    position: absolute;
+    bottom: 0px; /* Pinned 10px above the bottom */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
 }
 
 .button {
@@ -110,13 +112,6 @@ nav ul li a:hover {
     flex-shrink: 0; /* Prevents buttons from shrinking */
     white-space: nowrap; /* Keeps button text on one line */
 }
-
-.text-area p {
-    width: 100%;
-    margin: 10px 0;
-    flex-grow: 1;
-}
-
 
 .text-area .button-panel .button {
     display: inline-block;
@@ -136,6 +131,31 @@ nav ul li a:hover {
     background-color: rgb(161, 161, 161);
 }
 
+.tag-bar {
+    position: absolute;
+    top: 10px; /* Positioned 10px from the top */
+    left: 40px; /* Align with the content padding */
+    right: 20px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 2px 8px; /* Small padding to keep tags compact but legible */
+    font-size: 16px; /* Small font size for tags */
+    font-weight: 600;
+    color: #e0e0e0; /* White text color for legibility */
+    border-radius: 5px; /* Rounded corners for tags */
+    text-transform: capitalize; /* Optional: Capitalize tag text */
+}
+
+.tag.red { background-color: #ba2f28; }
+.tag.blue { background-color: #01549c; }
+.tag.mint { background-color: #2db38d; }
+.tag.yellow { background-color: #c6ac01; }
+.tag.green { background-color: #239d31; }
+.tag.purple { background-color: #850998; }
+.tag.orange { background-color: #986109; }
+.tag.pink { background-color: #df79dd; }
 
 @media (max-width: 768px) {
     nav ul li {
