@@ -11,12 +11,19 @@
             font-family: Arial, sans-serif;
         }
         ul {
-            list-style-type: square;
+            list-style-type: none;
             padding: 0;
         }
         li {
-            margin-top: 10px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
+        }
+        li ul {
+            padding-left: 20px; /* Indent child lists */
+        }
+        li.project {
+            font-weight: bold;
+            font-size: 1.2em; /* Increase font size of project names */
+            margin-bottom: 5px;
         }
         a {
             color: lightblue;
@@ -25,17 +32,24 @@
         a:hover {
             text-decoration: underline;
         }
+        .source-links li {
+            margin-bottom: 5px; /* Closer spacing for source links */
+        }
+        hr {
+            border: 1px solid gray;
+            margin: 20px 0; /* Space between project sections */
+        }
     </style>
 </head>
 <body>
     <h1>Carson Ellis</h1>
     <ul>
-        <li style="font-size=30"><a href="/Carson_Ellis_Resume.pdf">Resume</a></li>
-        <li style="font-size=30">Writing & Training a Vision Transformer
+        <li class="project">Writing & Training a Vision Transformer
             <ul>
-                <li>Vision Transformer written from scratch using PyTorch. Inspired by the TrOCR paper and classified images of ASL letter signs.</li>
+                <li>Vision Transformer written from scratch using PyTorch.</li>
+                <li>Inspired by the TrOCR paper and classified images of ASL letter signs.</li>
                 <li><strong>Source Links:</strong>
-                    <ul>
+                    <ul class="source-links">
                         <li><a href="https://github.com/crsnkntn/VisionTransformer">GitHub</a></li>
                         <li><a href="https://medium.com/@crsnkntn/writing-training-a-vision-transformer-for-asl-letters-d870c4d3aeb7">Blog Post</a></li>
                         <li><a href="https://arxiv.org/abs/2010.11929">ViT Paper</a></li>
@@ -44,12 +58,13 @@
                 </li>
             </ul>
         </li>
-        <li style="font-size=30">Program Synthesis with LLM-Sourced Heuristics
+        <hr>
+        <li class="project">Program Synthesis with LLM-Sourced Heuristics
             <ul>
                 <li>Improved performance of Google DeepMind's TensorFlow Coder for program search.</li>
                 <li>Implementation was faster and found more solutions.</li>
                 <li><strong>Source Links:</strong>
-                    <ul>
+                    <ul class="source-links">
                         <li><a href="https://github.com/crsnkntn/tensorflow-coder-IntPrSys">GitHub</a></li>
                         <li><a href="https://medium.com/@crsnkntn/8ded6026ddbc">Blog Post</a></li>
                         <li><a href="https://arxiv.org/abs/2003.09040">TFCoder Paper</a></li>
@@ -57,49 +72,54 @@
                 </li>
             </ul>
         </li>
-        <li style="font-size=30">Classifying Reddit Users in r/CFB (In Progress)
+        <hr>
+        <li class="project">Classifying Reddit Users in r/CFB (In Progress)
             <ul>
                 <li>Training models to classify users based on Reddit flair and team affiliation.</li>
                 <li>Currently for Human Behavior Modelling course.</li>
             </ul>
         </li>
-        <li style="font-size=30">Langset: Vocabulary and Phrase Flashcard Generation
+        <hr>
+        <li class="project">Langset: Vocabulary and Phrase Flashcard Generation
             <ul>
                 <li>GPT-3 based product that generated translation pairs for over 40 languages.</li>
                 <li>Ability to curate and export lists to Anki (no longer active).</li>
                 <li><strong>Source Link:</strong>
-                    <ul>
+                    <ul class="source-links">
                         <li><a href="https://github.com/mmartin4972/Langkit">GitHub</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
-        <li style="font-size=30">Tensor and Deep Learning Library (C++)
+        <hr>
+        <li class="project">Tensor and Deep Learning Library
             <ul>
                 <li>Learned tensor programming and built a NN to classify MNIST digits.</li>
                 <li><strong>Source Link:</strong>
-                    <ul>
+                    <ul class="source-links">
                         <li><a href="https://github.com/crsnkntn/carml/tree/main/cpp">GitHub</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
-        <li style="font-size=30">Data Structures and Algorithms (C++)
+        <hr>
+        <li class="project">Data Structures and Algorithms (C++)
             <ul>
                 <li>Debrief from the Data Structures and Algorithms course using C++.</li>
                 <li>Explored some design patterns and created a 2D Linked List.</li>
                 <li><strong>Source Link:</strong>
-                    <ul>
+                    <ul class="source-links">
                         <li><a href="https://github.com/crsnkntn/Data-Structures-and-Algorithms/tree/main">GitHub</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
-        <li style="font-size=30">Chess Game
+        <hr>
+        <li class="project">Chess Game
             <ul>
                 <li>Classic CS project with Chess.com board skin for the graphics.</li>
                 <li><strong>Source Link:</strong>
-                    <ul>
+                    <ul class="source-links">
                         <li><a href="https://github.com/crsnkntn/Chess-Game">GitHub</a></li>
                     </ul>
                 </li>
