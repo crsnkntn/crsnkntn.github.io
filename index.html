@@ -4,155 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carson Ellis</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
     <style>
+        /* Custom styles */
         body {
-            background-color: #222;
-            color: #ccc;
-            font-family: 'Courier New', monospace;
-            padding: 5px;
+            font-family: 'Roboto', sans-serif;
+            background-color: #040F0F; /* Dark background */
+            color: #F0F4F4; /* Light text for contrast */
+            margin: 0;
+            padding: 0;
         }
-    .project-title {
-        font-weight: bold; /* Ensure it's bold */
-        font-size: 1.7em; /* Slightly larger font */
-        margin-bottom: 10px; /* More spacing below the title */
-        color: #fff; /* Brighten the title to distinguish it */
-    }
-    h1 {
-        font-size: 2em; /* Larger title */
-        font-weight: normal;
-    }
-    
-    h2 {
-        font-size: 1.2em;
-        font-weight: normal;
-    }
-    
-    ul {
-        list-style-type: none;
-        padding-left: 40px; /* Double the indentation */
-    }
-    
-    li {
-        margin-bottom: 5px;
-    }
-    
-    li ul {
-        padding-left: 40px; /* Double indentation for nested lists */
-    }
-    
-    a {
-        color: #7a9ab7;
-        text-decoration: none;
-    }
-    
-    a:hover {
-        color: #999;
-    }
-    
-    hr {
-        border: 0.5px solid #444;
-        margin: 10px 0;
-    }
+        .container {
+            max-width: 1300px;
+            padding: 40px;
+        }
+        .intro-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+        .intro-text {
+            max-width: 60%;
+        }
+        .intro-text p {
+            font-size: 18px;
+            color: #2BA84A; /* Accent color */
+        }
+        .intro-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: #F0F4F4;
+        }
+        .intro-text h2 {
+            font-size: 36px;
+            font-weight: 600;
+            color: #A5D6A7;
+            margin-top: 10px;
+        }
+        .intro-text .description {
+            font-size: 16px;
+            color: #A5D6A7;
+            margin-top: 20px;
+            max-width: 700px;
+        }
+        .highlight-box {
+            background-color: #A5D6A7; /* Secondary accent color */
+            padding: 20px;
+            border-radius: 8px;
+            color: #F0F4F4;
+            font-size: larger;
+            text-align: center;
+            min-width: 400px;
+        }
+        .highlight-box a {
+            color: #F0F4F4;
+            font-weight: bold;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+        .product-preview {
+            background-color: #248232; /* Accent color */
+            color: #F0F4F4;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .product-title {
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'Roboto Mono', monospace;
+        }
+        .nav-buttons a {
+            color: #2BA84A; /* Accent color */
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: 2px solid #2BA84A;
+            margin-top: 10px;
+        }
+        .nav-buttons a:hover {
+            background-color: rgba(43, 168, 74, 0.2);
+        }
     </style>
 </head>
 <body>
-    <h1>Carson Ellis</h1>
-    <h2>contact: crsnkntn@gmail.com</h2>
-    <ul>
-        <li style="font-size=36"><a href="/Resume_Carson_Ellis.pdf">Resume</a></li>
-        <hr>
-        <li>
-            <span class="project-title">Writing & Training a Vision Transformer</span>
-            <ul>
-                <li>Vision Transformer written from scratch using PyTorch.</li>
-                <li>Inspired by the TrOCR paper and classified images of ASL letter signs.</li>
-                <li><strong>Source Links:</strong>
-                    <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/VisionTransformer">GitHub</a></li>
-                        <li><a href="https://medium.com/@crsnkntn/writing-training-a-vision-transformer-for-asl-letters-d870c4d3aeb7">Blog Post</a></li>
-                        <li><a href="https://arxiv.org/abs/2010.11929">ViT Paper</a></li>
-                        <li><a href="https://arxiv.org/abs/2109.10282">TrOCR Paper</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <hr>
-        <li>
-            <span class="project-title">Program Synthesis with LLM-Sourced Heuristics</span>
-            <ul>
-                <li>Improved performance of Google DeepMind's TensorFlow Coder for program search.</li>
-                <li>Implementation was faster and found more solutions.</li>
-                <li><strong>Source Links:</strong>
-                    <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/tensorflow-coder-IntPrSys">GitHub</a></li>
-                        <li><a href="https://medium.com/@crsnkntn/8ded6026ddbc">Blog Post</a></li>
-                        <li><a href="https://arxiv.org/abs/2003.09040">TFCoder Paper</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <hr>
-        <li>
-            <span class="project-title">Predicting College Football Win % Swings Using Real-Time Reddit Comment Analysis</span>
-            <ul>
-                <li>Created a pipeline of ML models and non-ML algorithms able to accept live streams of Reddit comments and predict what is happening in the game.</li>
-                <li><strong>Source Link:</strong>
-                    <ul class="source-links">
-                        <li><a href="">No Blog Post Yet (Ask me about it!)</a></li>
-                    </ul>
-                </li>            
-            </ul>
-        </li>
-        <hr>
-        <li>
-            <span class="project-title">Langset: Vocabulary and Phrase Flashcard Generation</span>
-            <ul>
-                <li>GPT-3 based product that generated translation pairs for over 40 languages.</li>
-                <li>Ability to curate and export lists to Anki (no longer active).</li>
-                <li><strong>Source Link:</strong>
-                    <ul class="source-links">
-                        <li><a href="https://github.com/mmartin4972/Langkit">GitHub</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <hr>
-        <li>
-            <span class="project-title">Tensor and Deep Learning Library</span>
-            <ul>
-                <li>Learned tensor programming and built a NN to classify MNIST digits.</li>
-                <li><strong>Source Link:</strong>
-                    <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/carml/tree/main/cpp">GitHub</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <hr>
-        <li>
-            <span class="project-title">Data Structures and Algorithms (C++)</span>
-            <ul>
-                <li>Debrief from the Data Structures and Algorithms course using C++.</li>
-                <li>Explored some design patterns and created a 2D Linked List.</li>
-                <li><strong>Source Link:</strong>
-                    <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/Data-Structures-and-Algorithms/tree/main">GitHub</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <hr>
-        <li>
-            <span class="project-title">Chess Game</span>
-            <ul>
-                <li>Classic CS project with Chess.com board skin for the graphics.</li>
-                <li><strong>Source Link:</strong>
-                    <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/Chess-Game">GitHub</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
+
+    <div class="container">
+        <!-- Intro Section with Left-aligned Text and Right-aligned Highlight Box -->
+        <div class="intro-section">
+            <div class="intro-text">
+                <p>Hi, my name is</p>
+                <h1>Carson</h1>
+                <h2>I've been building AI products since before it was cool.</h2>
+
+            </div>
+            <div class="highlight-box">
+                <p>I recently hiked the Pacific Crest Trail!</p>
+                <a href="#">Read about my trip --></a>
+            </div>
+        </div>
+
+        <!-- Product Previews -->
+        <div class="product-preview">
+            <span class="product-title">Product Preview Image 1</span>
+            <div class="nav-buttons d-flex flex-column">
+                <a href="#" class="btn btn-link">DEMO</a>
+                <a href="#" class="btn btn-link">GitHub</a>
+                <a href="#" class="btn btn-link">Blog</a>
+            </div>
+        </div>
+
+        <div class="product-preview">
+            <span class="product-title">Product Preview Image 2</span>
+            <div class="nav-buttons d-flex flex-column">
+                <a href="#" class="btn btn-link">DEMO</a>
+                <a href="#" class="btn btn-link">GitHub</a>
+                <a href="#" class="btn btn-link">Blog</a>
+            </div>
+        </div>
+
+        <div class="product-preview">
+            <span class="product-title">Product Preview Image 3</span>
+            <div class="nav-buttons d-flex flex-column">
+                <a href="#" class="btn btn-link">DEMO</a>
+                <a href="#" class="btn btn-link">GitHub</a>
+                <a href="#" class="btn btn-link">Blog</a>
+            </div>
+        </div>
+
+        <div class="product-preview">
+            <span class="product-title">Product Preview Image 4</span>
+            <div class="nav-buttons d-flex flex-column">
+                <a href="#" class="btn btn-link">DEMO</a>
+                <a href="#" class="btn btn-link">GitHub</a>
+                <a href="#" class="btn btn-link">Blog</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
