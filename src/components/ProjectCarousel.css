@@ -1,0 +1,41 @@
+.project-carousel {
+  width: 95%; /* Almost full width */
+  /*max-width: 1200px; /* Set a maximum width for large screens */
+  margin: 0 auto;
+  padding-top: 50px;
+  background-color: aquamarine;
+}
+
+.swiper-slide {
+  transform: scale(1); /* Base scale */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-slide-prev, .swiper-slide-next {
+  opacity: 0.8;
+  transform: scale(0.95); /* Slightly smaller for adjacent slides */
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.1); /* Make the active slide slightly larger */
+}
+
+.navigation-hint {
+  margin-top: 20px;
+  color: #3CB371;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.arrow-key {
+  display: inline-block;
+  padding: 2px 6px;
+  border: 1px solid #3CB371;
+  border-radius: 3px;
+  color: #3CB371;
+  font-weight: bold;
+  opacity: 0.9;
+}

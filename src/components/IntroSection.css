@@ -1,0 +1,26 @@
+.intro-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-left: 100px;
+}
+
+.intro-text h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #F0F4F4;
+}
+
+.intro-text h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #3CB371;
+  margin-top: 10px;
+}
+
+.intro-text p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3CB371;
+}

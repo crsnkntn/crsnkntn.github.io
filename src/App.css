@@ -1,0 +1,107 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #040F0F;
+  color: #F0F4F4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 40px;
+  padding-top: 100px;
+}
+
+.highlight-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #3CB371;
+  padding: 20px 0;
+  color: #FFFFFF;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.intro-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-left: 100px;
+}
+
+.intro-text h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #F0F4F4;
+}
+
+.intro-text h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #3CB371;
+  margin-top: 10px;
+}
+
+.intro-text p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3CB371;
+}
+
+.projects-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 60px;
+}
+
+.project-carousel {
+  width: 60%;
+}
+
+.project-preview {
+  background-color: #3CB371;
+  color: #F0F4F4;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-name {
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-buttons a {
+  color: #2BA84A;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 50%;
+  border: 2px solid #2BA84A;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-buttons a:hover {
+  background-color: rgba(43, 168, 74, 0.2);
+}
