@@ -3,157 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carson Ellis</title>
+    <title>Portfolio Page</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS for GitHub Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
     <style>
         /* Custom styles */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #040F0F; /* Dark background */
-            color: #F0F4F4; /* Light text for contrast */
+            background-color: #040F0F;
+            color: #F0F4F4;
             margin: 0;
             padding: 0;
         }
         .container {
-            max-width: 1300px;
+            max-width: 1100px;
             padding: 40px;
+            padding-top: 100px;
         }
         .intro-section {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 40px;
-            margin-left: 70px;
-            margin-right: 70px;
-        }
-        .intro-text {
-            max-width: 60%;
+            padding-left: 100px;
+            padding-right: 100px;
         }
         .intro-text p {
             font-size: 18px;
-            color: #2BA84A; /* Accent color */
+            font-weight: bold;
+            color: #3CB371;
         }
         .intro-text h1 {
             font-size: 48px;
             font-weight: bold;
             color: #F0F4F4;
+            padding-left: 30px;
         }
         .intro-text h2 {
             font-size: 36px;
             font-weight: 600;
-            color: #A5D6A7;
+            color: #3CB371;
             margin-top: 10px;
-        }
-        .intro-text .description {
-            font-size: 16px;
-            color: #A5D6A7;
-            margin-top: 20px;
-            max-width: 700px;
+            padding-left: 30px;
         }
         .highlight-box {
-            background-color: #A5D6A7; /* Secondary accent color */
-            padding: 20px;
-            border-radius: 8px;
-            color: #F0F4F4;
-            font-size: larger;
-            text-align: center;
-            min-width: 400px;
-        }
-        .highlight-box a {
-            color: #F0F4F4;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #3CB371; /* Lighter green for a friendly, fresh feel */
+            padding: 20px 0;
+            color: #FFFFFF;
+            font-size: 1.6em;
             font-weight: bold;
-            text-decoration: none;
-            display: block;
-            margin-top: 10px;
+            text-align: center;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
         }
-        .product-preview {
-            background-color: #248232; /* Accent color */
+
+        .highlight-box i {
+            font-size: 1.8em;
+            color: #FFFFFF;
+        }
+
+        .highlight-box a {
+            color: #FFFFFF;
+            text-decoration: underline;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            margin-top: 60px;
+        }
+        .projects-section h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #F0F4F4;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .project-preview {
+            background-color: #3CB371;
             color: #F0F4F4;
             padding: 20px;
             border-radius: 8px;
-            margin-top: 20px;
+            margin-bottom: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .product-title {
+        .project-name {
             font-weight: bold;
-            font-size: 18px;
+            font-size: 24px;
             font-family: 'Roboto Mono', monospace;
         }
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
         .nav-buttons a {
-            color: #2BA84A; /* Accent color */
+            color: #F0F4F4; /* Initial color for readability */
             text-decoration: none;
             font-weight: bold;
-            padding: 8px 16px;
-            border-radius: 4px;
-            border: 2px solid #2BA84A;
-            margin-top: 10px;
+            background-color: transparent;
+            padding: 0;
+            width: 70px; /* Increased width */
+            height: 70px; /* Increased height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .nav-buttons a:hover {
-            background-color: rgba(43, 168, 74, 0.2);
+
+        .nav-buttons .fa-github, .substack-icon {
+            font-size: 42px; /* Increased icon size */
+            color: #F0F4F4; /* Default color */
+        }
+
+        .nav-buttons a:hover .fa-github {
+            color: #0000EE; /* Change GitHub icon color on hover */
+        }
+
+        @media (max-width: 1024px) {
+            .container, .highlight-box {
+                display: none;
+            }
+            .mobile-message {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                text-align: center;
+                padding: 20px;
+                background-color: #3CB371;
+                color: #FFFFFF;
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+        }
+
+        /* Default: Hide the mobile-only message */
+        .mobile-message {
+            display: none;
         }
     </style>
 </head>
 <body>
+    <div class="mobile-message">
+        <p>This website is best viewed on a larger screen. Please switch to a desktop or expand your window for the full experience.</p>
+    </div>
 
     <div class="container">
+        <div class="highlight-box">
+            <i class="fas fa-mountain"></i>
+            <span>I recently hiked 1600 miles!</span>
+            <a href="#">READ ABOUT IT</a>
+            <i class="fas fa-mountain"></i>
+        </div>
         <!-- Intro Section with Left-aligned Text and Right-aligned Highlight Box -->
         <div class="intro-section">
             <div class="intro-text">
                 <p>Hi, my name is</p>
-                <h1>Carson</h1>
-                <h2>I've been building AI products since before it was cool.</h2>
-
-            </div>
-            <div class="highlight-box">
-                <p>I recently hiked the Pacific Crest Trail!</p>
-                <a href="#">Read about my trip --></a>
+                <h1>Carson,</h1>
+                <h2>I'm an AI expert and SWE.</h2>
             </div>
         </div>
 
-        <!-- Product Previews -->
-        <div class="product-preview">
-            <span class="product-title">Product Preview Image 1</span>
-            <div class="nav-buttons d-flex flex-column">
-                <a href="#" class="btn btn-link">DEMO</a>
-                <a href="#" class="btn btn-link">GitHub</a>
-                <a href="#" class="btn btn-link">Blog</a>
+        <!-- Projects Section -->
+        <div class="projects-section">
+            <h3>My Favorite Projects</h3>
+            
+            <div class="project-preview">
+                <span class="project-name">Python Program Synthesizer with LLM Heuristics</span>
+                <div class="nav-buttons">
+                    <!-- GitHub Icon -->
+                    <a href="#" class="btn btn-link"><i class="fab fa-github"></i></a>
+                    <!-- Substack Icon as SVG -->
+                    <a href="#" class="btn btn-link substack-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="18" height="2" fill="currentColor"/>
+                            <rect x="3" y="7" width="18" height="2" fill="currentColor"/>
+                            <rect x="3" y="11" width="18" height="10" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <div class="product-preview">
-            <span class="product-title">Product Preview Image 2</span>
-            <div class="nav-buttons d-flex flex-column">
-                <a href="#" class="btn btn-link">DEMO</a>
-                <a href="#" class="btn btn-link">GitHub</a>
-                <a href="#" class="btn btn-link">Blog</a>
-            </div>
-        </div>
-
-        <div class="product-preview">
-            <span class="product-title">Product Preview Image 3</span>
-            <div class="nav-buttons d-flex flex-column">
-                <a href="#" class="btn btn-link">DEMO</a>
-                <a href="#" class="btn btn-link">GitHub</a>
-                <a href="#" class="btn btn-link">Blog</a>
-            </div>
-        </div>
-
-        <div class="product-preview">
-            <span class="product-title">Product Preview Image 4</span>
-            <div class="nav-buttons d-flex flex-column">
-                <a href="#" class="btn btn-link">DEMO</a>
-                <a href="#" class="btn btn-link">GitHub</a>
-                <a href="#" class="btn btn-link">Blog</a>
-            </div>
+            <!-- Additional Project-Preview Sections (repeated structure) -->
         </div>
     </div>
 
     <!-- Bootstrap JS (optional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function checkWindowSize() {
+            if (window.innerWidth < 1100) {
+                alert("For the best experience, please expand your window to full screen.");
+            }
+        }
+        window.addEventListener("resize", checkWindowSize);
+        checkWindowSize();
+    </script>
 </body>
 </html>
