@@ -11,144 +11,136 @@
             font-family: 'Courier New', monospace;
             padding: 5px;
         }
-    .project-title {
-        font-weight: bold; /* Ensure it's bold */
-        font-size: 1.7em; /* Slightly larger font */
-        margin-bottom: 10px; /* More spacing below the title */
-        color: #fff; /* Brighten the title to distinguish it */
-    }
-    h1 {
-        font-size: 2em; /* Larger title */
-        font-weight: normal;
-    }
-    
-    h2 {
-        font-size: 1.2em;
-        font-weight: normal;
-    }
-    
-    ul {
-        list-style-type: none;
-        padding-left: 40px; /* Double the indentation */
-    }
-    
-    li {
-        margin-bottom: 5px;
-    }
-    
-    li ul {
-        padding-left: 40px; /* Double indentation for nested lists */
-    }
-    
-    a {
-        color: #7a9ab7;
-        text-decoration: none;
-    }
-    
-    a:hover {
-        color: #999;
-    }
-    
-    hr {
-        border: 0.5px solid #444;
-        margin: 10px 0;
-    }
+        .project-title {
+            font-weight: bold;
+            font-size: 1.7em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        h1 {
+            font-size: 2em;
+            font-weight: normal;
+        }
+        h2 {
+            font-size: 1.2em;
+            font-weight: normal;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 40px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        li ul {
+            padding-left: 40px;
+        }
+        a {
+            color: #7a9ab7;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #999;
+        }
+        hr {
+            border: 0.5px solid #444;
+            margin: 10px 0;
+        }
+        .icon {
+            font-size: 1.5em;
+            vertical-align: middle;
+        }
     </style>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <h1>Carson Ellis</h1>
     <h2>contact: crsnkntn@gmail.com</h2>
     <ul>
-        <li style="font-size=36"><a href="/Resume_Carson_Ellis.pdf">Resume</a></li>
+        <li style="font-size: 36"><a href="Resume_Carson_Ellis.pdf">Resume</a></li>
         <hr>
         <li>
-            <span class="project-title">Writing & Training a Vision Transformer</span>
+            <span class="project-title">Building and Interpreting a Vision Transformer from Scratch</span>
             <ul>
                 <li>Vision Transformer written from scratch using PyTorch.</li>
-                <li>Inspired by the TrOCR paper and classified images of ASL letter signs.</li>
-                <li><strong>Source Links:</strong>
+                <li>
                     <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/VisionTransformer">GitHub</a></li>
-                        <li><a href="https://medium.com/@crsnkntn/writing-training-a-vision-transformer-for-asl-letters-d870c4d3aeb7">Blog Post</a></li>
-                        <li><a href="https://arxiv.org/abs/2010.11929">ViT Paper</a></li>
-                        <li><a href="https://arxiv.org/abs/2109.10282">TrOCR Paper</a></li>
+                        <li><a href="https://github.com/crsnkntn/VisionTransformer"><i class="fab fa-github icon"></i> GitHub</a></li>
+                        <li><a href="https://medium.com/@crsnkntn/writing-training-a-vision-transformer-for-asl-letters-d870c4d3aeb7"><i class="fab fa-medium icon"></i> Blog Post</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
         <hr>
         <li>
-            <span class="project-title">Program Synthesis with LLM-Sourced Heuristics</span>
+            <span class="project-title">Python Program Synthesis with LLM Heuristics</span>
             <ul>
-                <li>Improved performance of Google DeepMind's TensorFlow Coder for program search.</li>
-                <li>Implementation was faster and found more solutions.</li>
-                <li><strong>Source Links:</strong>
+                <li>Improved performance of Google DeepMind's TensorFlow Coder for program search</li>
+                <li>
                     <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/tensorflow-coder-IntPrSys">GitHub</a></li>
-                        <li><a href="https://medium.com/@crsnkntn/8ded6026ddbc">Blog Post</a></li>
-                        <li><a href="https://arxiv.org/abs/2003.09040">TFCoder Paper</a></li>
+                        <li><a href="https://github.com/crsnkntn/tensorflow-coder-IntPrSys"><i class="fab fa-github icon"></i> GitHub</a></li>
+                        <li><a href="https://medium.com/@crsnkntn/8ded6026ddbc"><i class="fab fa-medium icon"></i> Blog Post</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
         <hr>
         <li>
-            <span class="project-title">Predicting College Football Win % Swings Using Real-Time Reddit Comment Analysis</span>
+            <span class="project-title">Real-Time Event Prediction in Reddit Streams</span>
             <ul>
-                <li>Created a pipeline of ML models and non-ML algorithms able to accept live streams of Reddit comments and predict what is happening in the game.</li>
-                <li><strong>Source Link:</strong>
+                <li>Created a pipeline of algorithms that predicted events during a live stream of Reddit comments</li>
+                <li>
                     <ul class="source-links">
-                        <li><a href="">No Blog Post Yet (Ask me about it!)</a></li>
+                        <li><a href=""><i class="fab fa-medium icon"></i> No Blog Post Yet (Ask me about it!)</a></li>
                     </ul>
-                </li>            
+                </li>
             </ul>
         </li>
         <hr>
         <li>
-            <span class="project-title">Langset: Vocabulary and Phrase Flashcard Generation</span>
+            <span class="project-title">Multi-lingual Flashcard Generation (before it was easy)</span>
             <ul>
-                <li>GPT-3 based product that generated translation pairs for over 40 languages.</li>
+                <li>GPT-3 based product that generated translation pairs for over 40 languages</li>
                 <li>Ability to curate and export lists to Anki (no longer active).</li>
-                <li><strong>Source Link:</strong>
+                <li>
                     <ul class="source-links">
-                        <li><a href="https://github.com/mmartin4972/Langkit">GitHub</a></li>
+                        <li><a href="https://github.com/mmartin4972/Langkit"><i class="fab fa-github icon"></i> GitHub</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
         <hr>
         <li>
-            <span class="project-title">Tensor and Deep Learning Library</span>
+            <span class="project-title">Efficient Tensor and Deep Learning Library in C++</span>
             <ul>
-                <li>Learned tensor programming and built a NN to classify MNIST digits.</li>
-                <li><strong>Source Link:</strong>
+                <li>Learned tensor programming and built a NN to classify MNIST digits</li>
+                <li>
                     <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/carml/tree/main/cpp">GitHub</a></li>
+                        <li><a href="https://github.com/crsnkntn/carml/tree/main/cpp"><i class="fab fa-github icon"></i> GitHub</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
         <hr>
         <li>
-            <span class="project-title">Data Structures and Algorithms (C++)</span>
+            <span class="project-title">Data Structures and Algorithms in C++</span>
             <ul>
-                <li>Debrief from the Data Structures and Algorithms course using C++.</li>
-                <li>Explored some design patterns and created a 2D Linked List.</li>
-                <li><strong>Source Link:</strong>
+                <li>Debrief for my sophomore year's Data Structures and Algorithms course</li>
+                <li>
                     <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/Data-Structures-and-Algorithms/tree/main">GitHub</a></li>
+                        <li><a href="https://github.com/crsnkntn/Data-Structures-and-Algorithms/tree/main"><i class="fab fa-github icon"></i> GitHub</a></li>
                     </ul>
                 </li>
             </ul>
         </li>
         <hr>
         <li>
-            <span class="project-title">Chess Game</span>
+            <span class="project-title">Chess++</span>
             <ul>
-                <li>Classic CS project with Chess.com board skin for the graphics.</li>
-                <li><strong>Source Link:</strong>
+                <li>
                     <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/Chess-Game">GitHub</a></li>
+                        <li><a href="https://github.com/crsnkntn/Chess-Game"><i class="fab fa-github icon"></i> GitHub</a></li>
                     </ul>
                 </li>
             </ul>
