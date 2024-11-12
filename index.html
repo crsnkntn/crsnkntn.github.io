@@ -11,6 +11,17 @@
             font-family: 'Courier New', monospace;
             padding: 5px;
         }
+        .top-bar {
+            background-color: #e5e5e5; /* Darker background for contrast */
+            color: #262626;
+            padding: 10px 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensure it stays on top */
+        }
         .project-title {
             font-weight: bold;
             font-size: 1.7em;
@@ -55,6 +66,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="top-bar">
+        I just walked 1600 miles! Read about my experience <a href="https://learningrevolution.substack.com" style="color: #3c19ff; text-decoration: underline;">here</a>
+    </div>
     <h1>Carson Ellis</h1>
     <h2>contact: crsnkntn@gmail.com</h2>
     <ul>
