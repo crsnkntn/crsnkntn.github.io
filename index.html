@@ -1,164 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carson Ellis</title>
-    <style>
-        body {
-            background-color: #222;
-            color: #ccc;
-            font-family: 'Courier New', monospace;
-            padding: 5px;
-        }
-        .top-bar {
-            background-color: #e5e5e5; /* Darker background for contrast */
-            color: #262626;
-            padding: 10px 20px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 2em;
-            position: sticky;
-            top: 0;
-            z-index: 1000; /* Ensure it stays on top */
-        }
-        .project-title {
-            font-weight: bold;
-            font-size: 1.7em;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-        h1 {
-            font-size: 2em;
-            font-weight: normal;
-        }
-        h2 {
-            font-size: 1.2em;
-            font-weight: normal;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 40px;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        li ul {
-            padding-left: 40px;
-        }
-        a {
-            color: #7a9ab7;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #999;
-        }
-        hr {
-            border: 0.5px solid #444;
-            margin: 10px 0;
-        }
-        .icon {
-            font-size: 1.5em;
-            vertical-align: middle;
-        }
-    </style>
-    <!-- Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <div class="top-bar">
-        I just walked 1600 miles! Read about my experience <a href="https://learningrevolution.substack.com" style="color: #3c19ff; text-decoration: underline;">here</a>
-    </div>
-    <h1>Carson Ellis</h1>
-    <h2>contact: crsnkntn@gmail.com</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>carson ellis</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body class="main-page">
+    <h1>> carson ellis</h1>
+    <h2>
+      > bse in cs from
+      <a href="https://en.wikipedia.org/wiki/Wolverine">umich</a>
+    </h2>
+    <h2>
+      > software developer @
+      <a href="https://www.linkedin.com/company/shifty-inc">shifty</a>
+    </h2>
     <ul>
-        <li style="font-size: 36"><a href="Resume_Carson_Ellis.pdf">Resume</a></li>
-        <hr>
-        <li>
-            <span class="project-title">Building and Interpreting a Vision Transformer from Scratch</span>
-            <ul>
-                <li>Vision Transformer written from scratch using PyTorch.</li>
-                <li>
-                    <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/VisionTransformer"><i class="fab fa-github icon"></i> GitHub</a></li>
-                        <li><a href="https://medium.com/@crsnkntn/writing-training-a-vision-transformer-for-asl-letters-d870c4d3aeb7"><i class="fab fa-medium icon"></i> Blog Post</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <hr>
-        <li>
-            <span class="project-title">Python Program Synthesis with LLM Heuristics</span>
-            <ul>
-                <li>Improved performance of Google DeepMind's TensorFlow Coder for program search</li>
-                <li>
-                    <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/tensorflow-coder-IntPrSys"><i class="fab fa-github icon"></i> GitHub</a></li>
-                        <li><a href="https://medium.com/@crsnkntn/8ded6026ddbc"><i class="fab fa-medium icon"></i> Blog Post</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <hr>
-        <li>
-            <span class="project-title">Real-Time Event Prediction in Reddit Streams</span>
-            <ul>
-                <li>Created a pipeline of algorithms that predicted events during a live stream of Reddit comments</li>
-                <li>
-                    <ul class="source-links">
-                        <li><a href=""><i class="fab fa-medium icon"></i> No Blog Post Yet (Ask me about it!)</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <hr>
-        <li>
-            <span class="project-title">Multi-lingual Flashcard Generation (before it was easy)</span>
-            <ul>
-                <li>GPT-3 based product that generated translation pairs for over 40 languages</li>
-                <li>Ability to curate and export lists to Anki (no longer active).</li>
-                <li>
-                    <ul class="source-links">
-                        <li><a href="https://github.com/mmartin4972/Langkit"><i class="fab fa-github icon"></i> GitHub</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <hr>
-        <li>
-            <span class="project-title">Efficient Tensor and Deep Learning Library in C++</span>
-            <ul>
-                <li>Learned tensor programming and built a NN to classify MNIST digits</li>
-                <li>
-                    <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/carml/tree/main/cpp"><i class="fab fa-github icon"></i> GitHub</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <hr>
-        <li>
-            <span class="project-title">Data Structures and Algorithms in C++</span>
-            <ul>
-                <li>Debrief for my sophomore year's Data Structures and Algorithms course</li>
-                <li>
-                    <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/Data-Structures-and-Algorithms/tree/main"><i class="fab fa-github icon"></i> GitHub</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <hr>
-        <li>
-            <span class="project-title">Chess++</span>
-            <ul>
-                <li>
-                    <ul class="source-links">
-                        <li><a href="https://github.com/crsnkntn/Chess-Game"><i class="fab fa-github icon"></i> GitHub</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
+      <!--li class="resume-link"> Dont need this, im happily employed
+        <a href="Resume_Carson_Ellis.pdf">Resume</a>
+      </li-->
+      <hr />
+      <h1>software projects</h1>
+      <li>
+        <a href="https://github.com/crsnkntn/VisionTransformer"
+          >> Building and Interpreting a Vision Transformer (2024)</a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/crsnkntn/tensorflow-coder-IntPrSys"
+          >> Python Program Synthesis with LLM Heuristics (2024)</a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/mmartin4972/Langkit"
+          >> Multi-lingual Flashcard Generation App (2023)</a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/crsnkntn/carml/tree/main/cpp"
+          >> Efficient Tensor and Deep Learning Library in C++ (2023)</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/crsnkntn/Data-Structures-and-Algorithms/tree/main"
+          >> Data Structures and Algorithms in C++ (2022)</a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/crsnkntn/Chess-Game">> Chess++ (2022)</a>
+      </li>
     </ul>
-</body>
+    <ul>
+      <!--li class="resume-link"> Dont need this, im happily employed
+        <a href="Resume_Carson_Ellis.pdf">Resume</a>
+      </li-->
+      <hr />
+      <h1>pacific crest trail</h1>
+      <li>
+        <a href="https://github.com/crsnkntn/VisionTransformer"
+          >> Stehekin, Washington</a
+        >
+      </li>
+    </ul>
+  </body>
 </html>

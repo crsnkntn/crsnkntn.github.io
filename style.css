@@ -1,175 +1,51 @@
 body {
-    font-family: 'Montserrat', monospace;
-    background-color: #121212;
-    color: hsl(0, 0%, 88%);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: "Roboto", monospace;
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    background-color: #121212;
+body.main-page {
+  background-color: #222;
+  color: #ffffff;
+  margin: 3em 10em;
 }
 
-header h1 {
-    font-size: 34px;
-    margin: 0;
+h1 {
+  font-size: 2em;
+  font-weight: normal;
 }
 
-nav {
-    text-align: right;
-    align-self: center;
-    margin: 0;
+h2 {
+  font-size: 1.2em;
+  font-weight: normal;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: inline-block;
+ul {
+  list-style-type: none;
+  padding-left: 40px;
 }
 
-nav ul li {
-    display: inline;
-    margin-left: 50px;
-    font-size: 42px;
-    font-weight: bold;
+li {
+  margin-bottom: 5px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #d1d1d1;
-    transition: color 0.3s;
+li ul {
+  padding-left: 40px;
 }
 
-nav ul li a:hover {
-    color: #44bda1;
-    text-decoration: underline;
+a {
+  color: #7a9ab7;
+  text-decoration: none;
 }
 
-.scroll-container {
-    margin-top: 80px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px; /* Space between items */
-    padding: 20px;
-    box-sizing: border-box;
+a:hover {
+  color: #999;
 }
 
-.block {
-    position: relative; /* Makes it a positioning context for absolute elements */
-    background-color: #222;
-    padding: 20px;
-    box-sizing: border-box;
-    min-height: 300px; /* Adjust based on your content needs */
-    margin-bottom: 20px;
+hr {
+  border: 0.5px solid #444;
+  margin: 10px 0;
 }
 
-.content-area {
-    padding-top: 10px;
-    padding-bottom: 60px; /* Space for button panel */
-    padding-left: 20px;
-    padding-right: 20px;
-    height: calc(100% - 20px); /* Adjust height calculation if necessary */
-}
-
-.text-area {
-    position: relative; /* Allows for absolute positioning of children if needed */
-    height: calc(100% - 30px); /* Leaves space for the tag bar, adjust as needed */
-}
-
-.text-area h2 {
-    font-size: 20px; /* Fixed size for consistency */
-    margin-bottom: 20px; /* Increased separation */
-}
-
-.text-area p {
-    font-size: 14px; /* Fixed size for consistency */
-    margin: 10px 0;
-}
-
-.button-panel {
-    position: absolute;
-    bottom: 0px; /* Pinned 10px above the bottom */
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    gap: 8px;
-}
-
-.button {
-    margin-right: 10px; /* Adds spacing between buttons if there are multiple */
-    flex-shrink: 0; /* Prevents buttons from shrinking */
-    white-space: nowrap; /* Keeps button text on one line */
-}
-
-.text-area .button-panel .button {
-    display: inline-block;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    color: rgb(23, 23, 23);
-    font-weight: 600;
-    background-color: #e1e1e1;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.text-area .button-panel .button:hover {
-    background-color: rgb(161, 161, 161);
-}
-
-.tag-bar {
-    position: absolute;
-    top: 10px; /* Positioned 10px from the top */
-    left: 40px; /* Align with the content padding */
-    right: 20px;
-}
-
-.tag {
-    display: inline-block;
-    padding: 2px 8px; /* Small padding to keep tags compact but legible */
-    font-size: 16px; /* Small font size for tags */
-    font-weight: 600;
-    color: #e0e0e0; /* White text color for legibility */
-    border-radius: 5px; /* Rounded corners for tags */
-    text-transform: capitalize; /* Optional: Capitalize tag text */
-}
-
-.tag.red { background-color: #ba2f28; }
-.tag.blue { background-color: #01549c; }
-.tag.mint { background-color: #2db38d; }
-.tag.yellow { background-color: #c6ac01; }
-.tag.green { background-color: #239d31; }
-.tag.purple { background-color: #850998; }
-.tag.orange { background-color: #986109; }
-.tag.pink { background-color: #df79dd; }
-
-@media (max-width: 768px) {
-    nav ul li {
-        margin-left: 10px;
-    }
-    .scroll-container {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
-    }
-
-    .content-area {
-        flex-direction: column;
-    }
-
-    .text-area, .image-area {
-        flex-basis: 100%;
-    }
+.icon {
+  font-size: 1.5em;
+  vertical-align: middle;
 }
