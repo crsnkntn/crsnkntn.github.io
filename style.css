@@ -1,3 +1,11 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   font-family: "Roboto", monospace;
 }
@@ -5,7 +13,29 @@ body {
 body.main-page {
   background-color: #222;
   color: #ffffff;
-  margin: 3em 10em;
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 300px;
+  padding: 3em;
+  background-color: #222;
+  border-right: 1px solid #444;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.main-content {
+  margin-left: 300px;
+  padding: 3em 10em;
+  flex: 1;
+  overflow-y: auto;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 h1 {
